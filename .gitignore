@@ -1,0 +1,62 @@
+# Kubernetes
+kubeconfig
+*.kubeconfig
+.kube/
+
+# Helm
+charts/*/charts
+charts/*/Chart.lock
+*.tgz
+
+# ArgoCD
+.argocd/
+argocd-secret.yaml
+*-secret.yaml
+*-secrets.yaml
+
+# Terraform (for any Terraform configs in subdirectories)
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform/
+.terraform.lock.hcl
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environment and local files
+.env
+.env.*
+*.local
+tmp/
+
+# Log files
+*.log
+logs/
+
+# Package managers
+node_modules/
+yarn.lock
+package-lock.json
+
+# Generated files
+dist/
+build/
+*.generated.* 
+
+*.workspaces.yaml

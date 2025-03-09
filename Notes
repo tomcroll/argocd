@@ -1,0 +1,59 @@
+Gitops
+
+To make infrastructure changes, we rely on Git for config management
+- it is the primary source of truth for infrastructure
+
+
+- git checkout -b scale
+    - new branch scale
+
+git add .
+git commit -m 'add ec2'
+- or
+git commit -m 'add 4 more ec2'
+
+- then
+git push -u origin scale
+- push command will give you the github URL
+- click on that
+- create a pull request
+- hit review changes after it's done
+- after the team reviews and approves the request, the changes get merged
+- then the corresponding CI/CD pipeline detects the update and applies it automatically
+
+- infrastructure is updated
+- confirm merge
+
+- New approach to managing infrastructure changes
+- Instead of directly modifying Terraform configurations locally,
+
+
+
+
+
+- The entire operations process revolves around making changes in Git and letting automation
+
+
+
+
+- Using ArgoCD you start by creating a pull request
+PR - git repo - infra.git
+
+- once the pull request gets approved and merged, Argo CD automatically applies the changes
+
+- ArgoCD monitors the infra.git for changes
+- when it detects a change, it clones the repo and applies the updates, usually with kubectl apply
+- or helm upgrade
+- depending on what you're Using
+- THIS IS CONTINUOS DELIVERY
+    - every change to the app source code results in a deployment in some environment
+    - typically, CONTINUOS DELIVERYis used in development and staging envs
+    - however in production, manual approval is still necessary before deploying any changes
+
+- ArgoCD is a tool that helps you manage your Kubernetes applications
+- It provides a web-based UI for managing your applications
+- It also provides a CLI for managing your applications
+- It also provides a API for managing your applications
+- It also provides a webhook for managing your applications
+- It also provides a webhook for managing your applications
+
